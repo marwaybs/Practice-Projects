@@ -7,7 +7,9 @@ def trade_spider():
     plain_text = source_code.text
     soup = BeautifulSoup(plain_text, "html.parser")
     for link in soup.findAll('a'):
-        href = link.get('href')
+        href = "http://bsmarway.pythonanywhere.com" + link.get('href')
+        title = link.string
+        print(title)
         print(href)
 trade_spider()
 
