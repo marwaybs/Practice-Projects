@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def trade_spider():
+def crawler():
     url = 'http://bsmarway.pythonanywhere.com'
     source_code = requests.get(url)
     plain_text = source_code.text
@@ -11,5 +11,4 @@ def trade_spider():
         title = link.string
         print(title)
         print(href)
-trade_spider()
-
+crawler()
